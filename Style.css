@@ -1,0 +1,81 @@
+
+
+body{
+   background: #000 none repeat scroll 0 0;
+   color: #999;
+   font-size: 100%;
+   line-height: 24px;
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    text-align: center;
+    background-color: red;
+    width: auto;
+    height: auto;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.heart-rate{
+   width: 800px;
+   height: 292px;
+   position: relative;
+   margin: 20px auto;
+}
+
+.fade-in{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: 0;
+animation: heartRateIn 3.0s linear infinite;
+}
+
+.fade-out{
+position: absolute;
+width: 120%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: -120%;
+animation: heartRateOut 3.0s linear infinite;
+background: rgba(0, 0, 0, 1);
+background: linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,1)80%,rgba(0,0,0,0)100%);
+}
+
+@keyframes heartRateIn{
+   0%{
+       width: 100%;
+   }
+   50%{
+       width: 0;
+   }
+   100%{
+       width: 0;
+   }
+}
+@keyframes heartRateOut{
+   0%{
+       left: -120%;
+   }
+   30%{
+       left: -120%;
+   }
+   100%{
+       left: 0;
+   }
+
+}
